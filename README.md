@@ -1,18 +1,7 @@
-# Leaving the CoC behind.
-
-![Screenshot](https://res.cloudinary.com/bushblade/image/upload/v1650398285/nvim-screenshot.webp)
-[kitty terminal](https://sw.kovidgoyal.net/kitty/) with [TokyoNight](https://sw.kovidgoyal.net/kitty/) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
-
 **My config for Nvim using native LSP with some sane defaults and settings**, mainly
-aimed at web development but ready to go with Python, Rust, Golang, Deno and Lua.
+aimed at web development . Based on [ Bushblade awesome config ](https://github.com/bushblade/nvim)
 
-Uses the latest 0.7+ Neovim
-
-## Clone the repository into ~/.config/nvim
-
-```bash
-git clone https://github.com/bushblade/nvim.git ~/.config/nvim
-```
+# Original Instructions
 
 ## Install Packer
 
@@ -85,17 +74,6 @@ On the first run of nvim be sure to install plugins.
 Then compile loader file.
 
 `:PackerCompile`
-
-## Note: Installing Firenvim
-
-Run this command in nvim to install FireNvim in your browser.
-
-```
-:call firenvim#install(0)
-```
-
-or install the [FireFox extension](https://addons.mozilla.org/en-GB/firefox/addon/firenvim/)
-or the [Chrome extension](https://chrome.google.com/webstore/detail/firenvim/egpjdkipkomnmjhjmdamaniclmdlobbo?hl=en)
 
 ## Adding custom Snippets
 
