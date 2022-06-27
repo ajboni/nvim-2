@@ -1,5 +1,6 @@
 require("bufferline").setup({
   options = {
+    right_mouse_command = "vertical sbuffer %d",
     offsets = {
       {
         filetype = "NvimTree",

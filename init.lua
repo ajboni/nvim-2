@@ -25,9 +25,9 @@ require("bufferline-settings")
 require("spectre-settings")
 require("autopairs-settings")
 require("Comment-settings")
-require("presence-settings")
+-- require("presence-settings")
 require("dashboard-settings")
-require("undo-tree-settings")
+-- require("undo-tree-settings")
 
 -- keymappings
 require("keymappings")
