@@ -146,6 +146,7 @@ map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>")
 map("n", "<Tab>", ":BufferLineCycleNext <cr>")
 map("n", "<C-s>", ":w<cr>") -- Save buffer
 map("i", "<C-s>", "<Esc>:w<cr>") -- Save buffer
+map("n", "<C-e>", "<C-w>") -- Close buffer
 map("n", "<C-w>", ":bdelete<cr>") -- Close buffer
 
 -- Global shorcutsL
