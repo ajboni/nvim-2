@@ -87,6 +87,7 @@ map("n", "<F12>", "<cmd>lua vim.lsp.buf.definition()<cr>")
 map("n", "<F2>", ":Telescope keymaps <cr>")
 map("n", "<F3>", ":Telescope commands <cr>")
 map({ "n", "i" }, "<F4>", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", opts)
+map({ "n", "i" }, "<F12>", "<esc><cmd>lua vim.lsp.buf.definition()<cr>")
 map({ "n", "i" }, "<C-]>", "<esc>:Telescope old_files hidden=true<cr>")
 -- map({ "n", "i" }, "<C-[>", "<esc>:Telescope old_files hidden=true<cr>")
 
