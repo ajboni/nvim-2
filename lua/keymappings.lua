@@ -67,10 +67,6 @@ local mappings = {
 				vim.diagnostic.goto_next(border_options)
 			end,
 		},
-		{ "gD", vim.lsp.buf.declaration },
-		{ "gd", vim.lsp.buf.definition },
-		{ "gr", vim.lsp.buf.references },
-		{ "gi", vim.lsp.buf.implementation },
 		-- bufferline
 		{ "H", "<cmd>BufferLineCyclePrev<CR>" },
 		{ "L", "<cmd>BufferLineCycleNext<CR>" },
@@ -155,14 +151,21 @@ map({ "n", "i", "v" }, "<C-f>", "<esc><cmd>HopWordCurrentLine<cr>")
 map({ "n", "i" }, "<F2>", ":Telescope keymaps <cr>")
 map({ "n", "i" }, "<F3>", ":Telescope commands <cr>")
 map({ "n", "i" }, "<F4>", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", opts)
-map({ "n", "i" }, "<F11>", "<esc>:Telescope lsp_dynamic_workspace_symbols<cr>")
+map({ "n", "i" }, "<F10>", "<esc>:Telescope lsp_dynamic_workspace_symbols<cr>")
 map({ "n", "i" }, "<F11>", "<esc>:Telescope lsp_document_symbols<cr>")
 map({ "n", "i" }, "<F12>", "<esc><cmd>lua vim.lsp.buf.definition()<cr>")
 
+-- File Picker
 map({ "n", "i" }, "<C-]>", "<esc>:Telescope oldfiles hidden=true<cr>")
 
+-- Comments
 map("n", "<C-_>", "<Cmd>lua require('Comment.api').toggle_current_blockwise_op()<CR>") -- (CTRL + /) Add a comment
---[[ map("i", "<C-_>", "<Esc><Cmd>lua require('Comment.api').toggle_current_linewise()<CR>^i") -- (CTRL + /) Add a comment ]]
 map("i", "<C-_>", "<Esc><Cmd>lua require('Comment.api').toggle_current_blockwise_op()<CR>^i") -- (CTRL + /) Add a comment
-
 map("x", "<C-_>", '<ESC><CMD>lua require("Comment.api").toggle_blockwise_op(vim.fn.visualmode())<CR>')
+
+-- LSP via Telescope
+local telescope = require("telescope.builtin")
+map("n", "gD", vim.lsp.buf.declaration)
+map("n", "gd", telescope.lsp_definitions)
+map("n", "gr", telescope.lsp_references)
+map("n", "gi", telescope.lsp_implementations)

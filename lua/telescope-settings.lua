@@ -20,16 +20,17 @@ telescope.setup({
 		sorting_strategy = "descending",
 		layout_strategy = "horizontal",
 		-- layout_strategy = "vertical",
-		-- layout_config = {
-		--   preview_width = 0.6,
-		--   horizontal = {
-		--     mirror = false,
-		--     preview_cutoff = 100,
-		--   },
-		--   vertical = {
-		--     mirror = false,
-		--   },
-		-- },
+		layout_config = {
+			preview_width = 0.5,
+			horizontal = {
+				--     mirror = false,
+				--     preview_cutoff = 100,
+				width = 0.95,
+			},
+			--   vertical = {
+			--     mirror = false,
+			--   },
+		},
 		preview = {
 			treesitter = false,
 		},
