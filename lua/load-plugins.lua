@@ -89,6 +89,8 @@ return require("packer").startup({
 
     -- icons in completion
     use("onsails/lspkind-nvim")
+    -- Show indent lines
+    use("lukas-reineke/indent-blankline.nvim")
 
     -- Folke plugins
     -- Theme
